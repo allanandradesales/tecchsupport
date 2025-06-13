@@ -1,0 +1,85 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 200px);
+  text-align: center;
+}
+
+.content {
+  max-width: 500px;
+  padding: var(--space-8);
+}
+
+.title {
+  font-size: 6rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin: 0;
+  line-height: 1;
+}
+
+.subtitle {
+  font-size: 2rem;
+  margin-top: var(--space-2);
+  margin-bottom: var(--space-6);
+}
+
+.message {
+  font-size: 1.1rem;
+  color: var(--color-neutral-600);
+  margin-bottom: var(--space-8);
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-4);
+}
+
+.homeButton, .ticketButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-6);
+  border-radius: var(--radius-md);
+  font-weight: 500;
+  text-decoration: none;
+  transition: all var(--transition-fast);
+}
+
+.homeButton {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+.homeButton:hover {
+  background-color: var(--color-primary-dark);
+}
+
+.ticketButton {
+  background-color: white;
+  color: var(--color-neutral-800);
+  border: 1px solid var(--color-neutral-300);
+}
+
+.ticketButton:hover {
+  background-color: var(--color-neutral-100);
+  border-color: var(--color-neutral-400);
+}
+
+@media (max-width: 768px) {
+  .actions {
+    flex-direction: column;
+    gap: var(--space-3);
+  }
+  
+  .title {
+    font-size: 4rem;
+  }
+  
+  .subtitle {
+    font-size: 1.5rem;
+  }
+}
